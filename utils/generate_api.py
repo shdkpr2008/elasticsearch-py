@@ -20,7 +20,7 @@ SUBSTITUTIONS = {"type": "doc_type", "from": "from_"}
 CODE_ROOT = Path(__file__).absolute().parent.parent
 BASE_PATH = (
     CODE_ROOT.parent
-    / "elasticsearch"
+    / "elasticsearch7"
     / "rest-api-spec"
     / "src"
     / "main"
@@ -30,7 +30,7 @@ BASE_PATH = (
 )
 XPACK_PATH = (
     CODE_ROOT.parent
-    / "elasticsearch"
+    / "elasticsearch7"
     / "x-pack"
     / "plugin"
     / "src"
@@ -65,7 +65,7 @@ class Module:
     def parse_orig(self):
         self.orders = []
         self.header = "class C:"
-        fname = CODE_ROOT / "elasticsearch" / "client" / f"{self.namespace}.py"
+        fname = CODE_ROOT / "elasticsearch7" / "client" / f"{self.namespace}.py"
         if os.path.exists(fname):
             with open(fname) as f:
                 content = f.read()
@@ -99,7 +99,7 @@ class Module:
 
     def dump(self):
         self.sort()
-        fname = CODE_ROOT / "elasticsearch" / "client" / f"{self.namespace}.py"
+        fname = CODE_ROOT / "elasticsearch7" / "client" / f"{self.namespace}.py"
         with open(fname, "w") as f:
             f.write(self.header)
             for api in self._apis:

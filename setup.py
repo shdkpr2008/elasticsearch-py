@@ -24,7 +24,7 @@ docs_require = ["sphinx<1.7", "sphinx_rtd_theme"]
 generate_require = ["black", "jinja2"]
 
 setup(
-    name="elasticsearch",
+    name="elasticsearch7",
     description="Python client for Elasticsearch",
     license="Apache-2.0",
     url="https://github.com/elastic/elasticsearch-py",
@@ -55,7 +55,7 @@ setup(
     ],
     python_requires=">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, <4",
     install_requires=install_requires,
-    test_suite="test_elasticsearch.run_tests.run_all",
+    test_suite="test_elasticsearch7.run_tests.run_all",
     tests_require=tests_require,
     extras_require={
         "develop": tests_require + docs_require + generate_require,

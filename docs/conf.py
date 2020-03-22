@@ -51,10 +51,10 @@ copyright = u"%d, Elasticsearch B.V" % datetime.date.today().year
 # built documents.
 #
 
-import elasticsearch
+import elasticsearch7
 
 # The short X.Y version.
-version = elasticsearch.__versionstr__
+version = elasticsearch7.__versionstr__
 # The full version, including alpha/beta/rc tags.
 release = version
 
